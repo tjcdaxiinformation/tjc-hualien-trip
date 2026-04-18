@@ -190,7 +190,7 @@
             const statusText = document.getElementById('status-text');
 
             // --- 手動更新模式 (建議方案) ---
-            let manualCount = 65; // <--- 每次有人報名，只需修改 GitHub 上的這個數字並存檔
+            let manualCount = 14; // <--- 每次有人報名，只需修改 GitHub 上的這個數字並存檔
             
             updateDisplay(manualCount);
 
@@ -203,7 +203,7 @@
                 statusText.innerHTML = `感謝主！目前僅剩 <span class="text-red-500 font-bold">${remaining}</span> 個名額，欲報從速！`;
                 
                 if (count >= totalCapacity) {
-                    statusText.innerHTML = "✨ 感謝主！名額已滿，進入候補名單。";
+                    statusText.innerHTML = "✨ 感謝主！以兩台瀏覽車滿額84人為滿額，名額已滿，進入候補名單。";
                     statusText.classList.add("text-emerald-600");
                 }
             }
