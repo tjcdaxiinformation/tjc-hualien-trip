@@ -23,7 +23,7 @@
             object-fit: cover;
             border-radius: 12px;
             margin-bottom: 1rem;
-            background-color: #e2e8f0; /* 圖片載入前的底色 */
+            background-color: #e2e8f0;
             transition: transform 0.3s ease;
         }
         .scenery-img:hover {
@@ -72,6 +72,7 @@
                     <li class="font-bold text-emerald-700"><span class="text-emerald-500 mr-2">●</span>北浦教會聯誼</li>
                     <li><span class="text-sky-500 mr-2">●</span>七星潭、柴魚博物館</li>
                     <li><span class="text-sky-500 mr-2">●</span>花蓮文創園區</li>
+                    <li><span class="text-sky-500 mr-2">●</span>入住：承億文旅</li>
                 </ul>
             </div>
 
@@ -128,7 +129,7 @@
                     <div id="progress-fill" class="progress-bar gradient-bg h-full" style="width: 0%"></div>
                 </div>
                 <p class="text-center text-sm text-gray-500 mt-3 font-medium">
-                    ✨ <span id="status-text">正在讀取最新報名數據...</span>
+                    ✨ <span id="status-text">正在從雲端更新報名數據...</span>
                 </p>
             </div>
         </div>
@@ -162,8 +163,7 @@
                 </div>
                 
                 <div class="flex-shrink-0">
-                    <!-- 雲端表單連結按鈕 -->
-                    <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" target="_blank" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-10 rounded-xl transition duration-300 transform hover:scale-105 shadow-lg text-center">
+                    <a href="https://forms.gle/j4q9v3xBTk4vwUYi8" target="_blank" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-10 rounded-xl transition duration-300 transform hover:scale-105 shadow-lg text-center">
                         點我填寫雲端報名表
                     </a>
                 </div>
@@ -199,12 +199,9 @@
             const progressFill = document.getElementById('progress-fill');
             const statusText = document.getElementById('status-text');
 
-            /** * [重要設定] 
-             * 請將此網址替換成您的 Google 試算表「發布到網路」生成的 CSV 網址
-             */
-            const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS-MOCK-URL/pub?output=csv';
+            // 串接 Google 試算表 CSV 網址
+            const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTg8N7hET1o2QMFrhjUhPwfFGeBRJ6hjWKhY6N1n_9x-Fl6WHLe3WuqKEPDsbMiLL3_70mz4nG6to-y/pub?output=csv';
 
-            // 初始顯示
             currentElement.innerText = "讀取中";
 
             fetch(CSV_URL)
@@ -216,31 +213,31 @@
                         return;
                     }
 
-                    // 1. 取得標題列，尋找包含「人數」字眼的欄位索引
+                    // 解析標題列
                     const headers = rows[0].split(',');
+                    // 尋找包含「人數」或「總人數」的欄位索引
                     let peopleColIndex = headers.findIndex(h => h.includes('人數'));
                     
-                    // 2. 加總所有報名人數
                     let totalCount = 0;
                     for (let i = 1; i < rows.length; i++) {
+                        // 使用簡單的逗號分割（處理報名表單通常足夠）
                         const cols = rows[i].split(',');
                         if (peopleColIndex !== -1 && cols[peopleColIndex]) {
-                            // 讀取該數值並進行清洗
+                            // 讀取該列的人數並累加
                             const rawVal = cols[peopleColIndex].trim().replace(/"/g, '');
                             const val = parseInt(rawVal);
-                            totalCount += isNaN(val) ? 1 : val;
+                            totalCount += isNaN(val) ? 1 : val; // 若非數字則預設為 1
                         } else {
-                            totalCount += 1;
+                            totalCount += 1; // 若找不到欄位則預設每筆資料 1 人
                         }
                     }
                     
                     updateDisplay(totalCount);
                 })
                 .catch(err => {
-                    console.error("無法讀取數據:", err);
-                    statusText.innerText = "暫時無法讀取數據，請洽會計股查詢。";
-                    // 備援：顯示目前的參考人數
-                    updateDisplay(65); 
+                    console.error("讀取失敗:", err);
+                    statusText.innerText = "數據同步中，請洽會計股查詢。";
+                    updateDisplay(0); 
                 });
 
             function updateDisplay(count) {
@@ -251,7 +248,7 @@
                 progressFill.style.width = percentage + '%';
                 
                 if (count >= totalCapacity) {
-                    statusText.innerHTML = "✨ 感謝主！名額已滿，進入候補名單。";
+                    statusText.innerHTML = "✨ 感謝主！名額已滿，歡迎聯繫會計股登記候補。";
                     statusText.classList.add("text-emerald-600");
                 } else {
                     const displayRemaining = remaining < 0 ? 0 : remaining;
