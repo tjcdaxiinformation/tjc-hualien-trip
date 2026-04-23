@@ -17,7 +17,6 @@
         .card-shadow {
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
         }
-        /* 圖片容器：確保即便圖片沒跑出來，也會有一個美觀的底色 */
         .img-container {
             width: 100%;
             height: 240px;
@@ -36,7 +35,6 @@
         .img-container:hover .scenery-img {
             transform: scale(1.1);
         }
-        /* 景點標籤 */
         .spot-badge {
             position: absolute;
             top: 12px;
@@ -48,17 +46,7 @@
             font-size: 0.75rem;
             font-weight: bold;
             backdrop-filter: blur(4px);
-        }
-        .progress-bar {
-            transition: width 1s ease-in-out;
-        }
-        .modal {
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-        .modal.hidden {
-            opacity: 0;
-            visibility: hidden;
-            display: none;
+            z-index: 10;
         }
         .spot-link {
             text-decoration: underline;
@@ -71,6 +59,14 @@
             text-decoration-style: solid;
             font-weight: bold;
         }
+        .modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal.hidden {
+            opacity: 0;
+            visibility: hidden;
+            display: none;
+        }
         @media print {
             .no-print { display: none; }
             body { background: white; }
@@ -79,10 +75,8 @@
 </head>
 <body class="p-4 md:p-8">
 
-    <!-- 海報容器 -->
     <div class="max-w-5xl mx-auto bg-white rounded-[2rem] overflow-hidden card-shadow border-8 border-white">
         
-        <!-- 標題區域 -->
         <div class="gradient-bg p-10 text-white text-center relative overflow-hidden">
             <div class="absolute top-0 right-0 opacity-10 -mr-10 -mt-10">
                 <svg width="300" height="300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
@@ -96,325 +90,170 @@
             </div>
         </div>
 
-        <!-- 核心內容 -->
         <div class="p-6 md:p-12 grid grid-cols-1 md:grid-cols-3 gap-10">
-            <!-- 第一天 -->
             <div class="flex flex-col">
                 <div class="img-container bg-sky-100">
-                    <span class="spot-badge">✨ 絕美海岸</span>
-                    <img src="https://images.unsplash.com/photo-1549410191-4433f4a3e743?auto=format&fit=crop&q=80&w=800" 
-                         alt="" 
-                         class="scenery-img"
-                         onerror="this.style.display='none'; this.parentElement.innerHTML += '<div class=\'w-full h-full flex flex-col items-center justify-center text-sky-600 p-4\'><svg class=\'w-12 h-12 mb-2\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z\'></path></svg><span class=\'font-bold\'>七星潭景觀</span></div>'">
+                    <span class="spot-badge">✨ 實景拍攝</span>
+                    <img src="day1.jpg" alt="" class="scenery-img" onerror="this.src='https://via.placeholder.com/400x240/0ea5e9/ffffff?text=七星潭'">
                 </div>
-                <div class="text-sky-600 font-black text-3xl mb-4 border-b-2 border-sky-100 pb-2">Day 1 <span class="text-sm font-bold text-gray-400 block mt-1 uppercase tracking-widest">Departure & Ocean</span></div>
+                <div class="text-sky-600 font-black text-3xl mb-4 border-b-2 border-sky-100 pb-2">Day 1</div>
                 <ul class="space-y-4 text-gray-700 text-base">
-                    <li class="flex items-start"><span class="text-sky-500 mr-2 mt-1">●</span><span>大溪出發 07:00</span></li>
-                    <li class="flex items-start"><span class="text-sky-500 mr-2 mt-1">●</span><a href="https://tour-hualien.hl.gov.tw/Attraction/Detail/1120" target="_blank" class="spot-link">台泥 DAkA 園區</a></li>
-                    <li class="font-bold text-emerald-700 bg-emerald-50 px-3 py-2 rounded-xl border border-emerald-100 shadow-sm leading-snug"><span class="text-emerald-500 mr-2">●</span>北浦教會聯誼加愛餐</li>
-                    <li class="flex items-start"><span class="text-sky-500 mr-2 mt-1">●</span><a href="https://tour-hualien.hl.gov.tw/Attraction/Detail/13" target="_blank" class="spot-link">七星潭</a>、<a href="https://tour-hualien.hl.gov.tw/Attraction/Detail/57" target="_blank" class="spot-link">柴魚博物館</a></li>
-                    <li class="flex items-start"><span class="text-sky-500 mr-2 mt-1">●</span><a href="https://tour-hualien.hl.gov.tw/Attraction/Detail/55" target="_blank" class="spot-link">花蓮文創園區</a></li>
-                    <li class="flex items-start font-bold"><span class="text-sky-500 mr-2 mt-1">●</span>入住：<a href="https://share.google/JoJoZstnhiK8nGNI2" target="_blank" class="text-sky-600 underline hover:text-sky-800 transition font-black">承億文旅</a></li>
+                    <li><span class="text-sky-500 mr-2">●</span>大溪出發 07:00</li>
+                    <li><span class="text-sky-500 mr-2">●</span><a href="https://tour-hualien.hl.gov.tw/Attraction/Detail/1120" target="_blank" class="spot-link">台泥 DAkA 園區</a></li>
+                    <li class="font-bold text-emerald-700 bg-emerald-50 px-3 py-2 rounded-xl border border-emerald-100 shadow-sm"><span class="text-emerald-500 mr-2">●</span>北浦教會聯誼加愛餐</li>
+                    <li><span class="text-sky-500 mr-2">●</span><a href="https://tour-hualien.hl.gov.tw/Attraction/Detail/13" target="_blank" class="spot-link">七星潭</a>、<a href="https://tour-hualien.hl.gov.tw/Attraction/Detail/57" target="_blank" class="spot-link">柴魚博物館</a></li>
+                    <li><span class="text-sky-500 mr-2">●</span>入住：<a href="https://share.google/JoJoZstnhiK8nGNI2" target="_blank" class="text-sky-600 underline font-black">承億文旅</a></li>
                 </ul>
             </div>
 
-            <!-- 第二天 -->
             <div class="flex flex-col">
                 <div class="img-container bg-emerald-100">
                     <span class="spot-badge">🐬 歡樂冒險</span>
-                    <img src="https://images.unsplash.com/photo-1513889959010-65a4ec810ebb?auto=format&fit=crop&q=80&w=800" 
-                         alt="" 
-                         class="scenery-img"
-                         onerror="this.style.display='none'; this.parentElement.innerHTML += '<div class=\'w-full h-full flex flex-col items-center justify-center text-emerald-600 p-4\'><svg class=\'w-12 h-12 mb-2\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\'></path></svg><span class=\'font-bold\'>海洋公園景觀</span></div>'">
+                    <img src="day2.jpg" alt="" class="scenery-img" onerror="this.src='https://via.placeholder.com/400x240/10b981/ffffff?text=海洋公園'">
                 </div>
-                <div class="text-emerald-600 font-black text-3xl mb-4 border-b-2 border-emerald-100 pb-2">Day 2 <span class="text-sm font-bold text-gray-400 block mt-1 uppercase tracking-widest">Joyful Park</span></div>
+                <div class="text-emerald-600 font-black text-3xl mb-4 border-b-2 border-emerald-100 pb-2">Day 2</div>
                 <ul class="space-y-4 text-gray-700 text-base">
-                    <li class="font-bold text-blue-700 flex items-start"><span class="text-blue-500 mr-2 mt-1">●</span><a href="https://tour-hualien.hl.gov.tw/Attraction/Detail/65" target="_blank" class="spot-link">遠雄海洋公園</a></li>
-                    <li class="text-sm text-gray-500 ml-6 italic">(整日暢遊，午餐自理)</li>
-                    <li class="font-bold text-emerald-700 bg-emerald-50 px-3 py-2 rounded-xl border border-emerald-100 shadow-sm leading-snug"><span class="text-emerald-500 mr-2">●</span>銅門教會聯誼加愛餐</li>
-                    <li class="flex items-start"><span class="text-emerald-500 mr-2 mt-1">●</span>花蓮市區自由活動</li>
-                    <li class="flex items-start font-bold"><span class="text-emerald-500 mr-2 mt-1">●</span>入住：<a href="https://share.google/JoJoZstnhiK8nGNI2" target="_blank" class="text-sky-600 underline hover:text-sky-800 transition font-black">承億文旅</a></li>
+                    <li class="font-bold text-blue-700"><span class="text-blue-500 mr-2">●</span><a href="https://tour-hualien.hl.gov.tw/Attraction/Detail/65" target="_blank" class="spot-link">遠雄海洋公園</a></li>
+                    <li class="font-bold text-emerald-700 bg-emerald-50 px-3 py-2 rounded-xl border border-emerald-100 shadow-sm"><span class="text-emerald-500 mr-2">●</span>銅門教會聯誼加愛餐</li>
+                    <li><span class="text-emerald-500 mr-2">●</span>花蓮市區自由活動</li>
+                    <li><span class="text-emerald-500 mr-2">●</span>入住：<a href="https://share.google/JoJoZstnhiK8nGNI2" target="_blank" class="text-sky-600 underline font-black">承億文旅</a></li>
                 </ul>
             </div>
 
-            <!-- 第三天 -->
             <div class="flex flex-col">
                 <div class="img-container bg-amber-100">
                     <span class="spot-badge">🌄 壯麗自然</span>
-                    <img src="https://images.unsplash.com/photo-1506450983270-d72944227ed8?auto=format&fit=crop&q=80&w=800" 
-                         alt="" 
-                         class="scenery-img"
-                         onerror="this.style.display='none'; this.parentElement.innerHTML += '<div class=\'w-full h-full flex flex-col items-center justify-center text-amber-600 p-4\'><svg class=\'w-12 h-12 mb-2\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z\'></path></svg><span class=\'font-bold\'>清水斷崖景觀</span></div>'">
+                    <img src="day3.jpg" alt="" class="scenery-img" onerror="this.src='https://via.placeholder.com/400x240/f59e0b/ffffff?text=清水斷崖'">
                 </div>
-                <div class="text-amber-600 font-black text-3xl mb-4 border-b-2 border-amber-100 pb-2">Day 3 <span class="text-sm font-bold text-gray-400 block mt-1 uppercase tracking-widest">Grand Nature</span></div>
+                <div class="text-amber-600 font-black text-3xl mb-4 border-b-2 border-amber-100 pb-2">Day 3</div>
                 <ul class="space-y-4 text-gray-700 text-base">
-                    <li class="flex items-start"><span class="text-amber-500 mr-2 mt-1">●</span><a href="https://tour-hualien.hl.gov.tw/Attraction/Detail/734" target="_blank" class="spot-link">地味耕玩味蕃樂園</a></li>
-                    <li class="font-bold text-emerald-700 bg-emerald-50 px-3 py-2 rounded-xl border border-emerald-100 shadow-sm leading-snug"><span class="text-emerald-500 mr-2">●</span>崇德教會聯誼加愛餐</li>
-                    <li class="flex items-start"><span class="text-amber-500 mr-2 mt-1">●</span><a href="https://tour-hualien.hl.gov.tw/Attraction/Detail/10" target="_blank" class="spot-link">崇德瑩海灘秘境</a></li>
-                    <li class="flex items-start"><span class="text-amber-500 mr-2 mt-1">●</span><a href="https://tour-hualien.hl.gov.tw/Attraction/Detail/45" target="_blank" class="spot-link text-amber-800">石門休憩區</a> (海鮮餐)</li>
-                    <li class="flex items-start font-bold"><span class="text-amber-500 mr-2 mt-1">●</span>平安賦歸 19:00</li>
+                    <li><span class="text-amber-500 mr-2">●</span><a href="https://tour-hualien.hl.gov.tw/Attraction/Detail/734" target="_blank" class="spot-link">地味耕玩味蕃樂園</a></li>
+                    <li class="font-bold text-emerald-700 bg-emerald-50 px-3 py-2 rounded-xl border border-emerald-100 shadow-sm"><span class="text-emerald-500 mr-2">●</span>崇德教會聯誼加愛餐</li>
+                    <li><span class="text-amber-500 mr-2">●</span><a href="https://tour-hualien.hl.gov.tw/Attraction/Detail/10" target="_blank" class="spot-link">崇德瑩海灘秘境</a></li>
+                    <li><span class="text-amber-500 mr-2">●</span>平安賦歸 19:00</li>
                 </ul>
             </div>
         </div>
 
-        <!-- 報名統計區塊 -->
-        <div class="px-6 md:px-12 pb-8">
-            <div class="bg-white border-4 border-emerald-100 rounded-3xl p-8 shadow-inner">
-                <div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-4 gap-4">
-                    <div class="text-center md:text-left">
-                        <span class="bg-emerald-100 text-emerald-700 text-sm font-black px-3 py-1 rounded-lg mb-2 inline-block uppercase tracking-wider">即時報名統計</span>
-                        <h4 class="text-gray-800 font-black text-2xl">
-                            出訪總人數進度 <span class="text-base font-bold text-gray-400 ml-2">（兩台車滿額 84 名）</span>
-                        </h4>
+        <div class="px-6 md:px-12 pb-12">
+            <div class="bg-white border-4 border-emerald-100 rounded-3xl p-8 shadow-inner flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-1 w-full">
+                    <div class="flex justify-between items-end mb-4">
+                        <div>
+                            <span class="bg-emerald-100 text-emerald-700 text-sm font-black px-3 py-1 rounded-lg mb-2 inline-block">即時報名統計</span>
+                            <h4 class="text-gray-800 font-black text-2xl">出訪人數進度</h4>
+                        </div>
+                        <div class="text-right">
+                            <span id="current-count" class="text-5xl font-black text-emerald-600">--</span>
+                            <span class="text-gray-400 font-black text-2xl">/ 84 人</span>
+                        </div>
                     </div>
-                    <div class="text-right">
-                        <span id="current-count" class="text-5xl font-black text-emerald-600">--</span>
-                        <span class="text-gray-400 font-black text-2xl">/ 84 人</span>
+                    <div class="w-full bg-gray-100 rounded-full h-8 p-1 overflow-hidden shadow-inner mb-4">
+                        <div id="progress-fill" class="progress-bar gradient-bg h-full rounded-full" style="width: 0%"></div>
                     </div>
+                    <p class="text-gray-500 font-bold">✨ <span id="status-text">同步雲端數據中...</span></p>
                 </div>
-                <!-- 進度條 -->
-                <div class="w-full bg-gray-100 rounded-full h-8 p-1 overflow-hidden shadow-inner">
-                    <div id="progress-fill" class="progress-bar gradient-bg h-full rounded-full flex items-center justify-end pr-4" style="width: 0%">
-                        <span id="progress-pct" class="text-[10px] text-white font-bold opacity-0">0%</span>
-                    </div>
+
+                <div class="bg-gray-50 p-4 rounded-2xl border-2 border-emerald-100 flex flex-col items-center">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://forms.gle/j4q9v3xBTk4vwUYi8" 
+                         alt="報名 QR Code" class="w-32 h-32 mb-2 shadow-sm">
+                    <p class="text-emerald-700 font-black text-sm tracking-tighter">手機掃描立即報名</p>
                 </div>
-                <p class="text-center text-base text-gray-500 mt-4 font-bold">
-                    ✨ <span id="status-text">同步雲端最新數據中...</span>
-                </p>
             </div>
         </div>
 
-        <!-- 費用資訊 -->
-        <div class="bg-gray-50 p-8 md:p-12 border-t border-gray-100">
-            <div class="text-center mb-10">
-                <h3 class="text-gray-400 text-sm font-black uppercase tracking-[0.4em] mb-2 leading-relaxed">報名費用與補助說明</h3>
-                <p class="text-emerald-700 font-black text-xl">教會年度預算已編列補助共計 25 萬元整</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                <div class="bg-white p-6 rounded-2xl shadow-sm border-b-4 border-emerald-500 text-center transform hover:-translate-y-1 transition">
-                    <p class="text-gray-400 text-sm mb-2 font-bold tracking-tighter">國小以上至成人</p>
-                    <p class="text-3xl font-black text-emerald-600">NT$ 2,000</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border-b-4 border-sky-500 text-center transform hover:-translate-y-1 transition">
-                    <p class="text-gray-400 text-sm mb-2 font-bold tracking-tighter">4 歲至 7 歲幼兒</p>
-                    <p class="text-3xl font-black text-sky-600">NT$ 1,000</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border-b-4 border-amber-400 text-center transform hover:-translate-y-1 transition">
-                    <p class="text-gray-400 text-sm mb-2 font-bold tracking-tighter">0 歲至 3 歲嬰兒</p>
-                    <p class="text-3xl font-black text-amber-600">NT$ 100</p>
-                </div>
-            </div>
-
+        <div class="bg-gray-50 p-8 border-t border-gray-100">
             <div class="flex flex-col lg:flex-row justify-between items-center gap-10">
                 <div class="text-center lg:text-left flex-1">
-                    <p class="text-sm text-gray-500 leading-relaxed mb-6">
-                        <span class="font-black text-gray-800">費用內含：</span>全程交通、住宿、景點門票、高額保險、聯誼餐費。<br>
-                        <span class="font-black text-gray-800">注意事項：</span>7/20 海洋公園午餐由各家自理，其餘皆已規劃妥當。
+                    <h3 class="text-emerald-700 font-black text-xl mb-2">預算補助 25 萬元</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed italic mb-4">
+                        「出訪是愛主的表現，付出報名費獲得同靈分享的價值：無價」
                     </p>
-                    <a href="https://photos.app.goo.gl/YOUR_ALBUM_LINK" target="_blank" class="inline-flex items-center bg-sky-100 hover:bg-sky-200 text-sky-700 px-6 py-3 rounded-xl text-base font-black transition duration-300 shadow-sm">
-                        <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                        分享旅遊影像
+                    <a href="#" target="_blank" class="inline-flex items-center bg-sky-100 hover:bg-sky-200 text-sky-700 px-4 py-2 rounded-lg text-sm font-bold">
+                        📷 分享旅遊影像
                     </a>
                 </div>
                 
                 <div class="flex-shrink-0">
-                    <button onclick="openCalculator()" class="group relative inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-black py-6 px-14 rounded-2xl transition duration-300 transform hover:scale-105 shadow-[0_20px_50px_rgba(16,_185,_129,0.3)] text-xl">
-                        點我報名 ‧ 試算費用
-                        <div class="absolute -top-3 -right-3 bg-red-500 text-white text-xs px-3 py-1 rounded-full animate-bounce shadow-lg">HOT</div>
+                    <button onclick="openCalculator()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-black py-5 px-10 rounded-2xl transition duration-300 transform hover:scale-105 shadow-xl text-xl">
+                        點我報名並試算費用
                     </button>
                 </div>
 
-                <div class="text-center lg:text-right border-l-0 lg:border-l-2 pl-0 lg:pl-10 border-gray-200">
-                    <p class="text-gray-700 font-black text-lg">報名費繳交：會計股 胡哲貞姊妹</p>
-                    <p class="text-red-500 font-black text-2xl mt-1">報名截止日期：6 / 20</p>
-                    <p class="text-gray-400 text-sm font-bold mt-2 uppercase tracking-tighter">Next Meeting: 115年7月下次籌備會</p>
+                <div class="text-center lg:text-right border-l-0 lg:border-l pl-0 lg:pl-10 border-gray-200">
+                    <p class="text-gray-700 font-bold">報名費繳交：會計股 胡哲貞姊妹</p>
+                    <p class="text-red-500 font-black text-2xl">截止日期：6 / 20</p>
                 </div>
             </div>
         </div>
-
-        <!-- 底部金句 -->
-        <div class="bg-white p-6 text-center text-xs text-gray-400 font-bold tracking-widest border-t border-gray-50">
-            「我的心哪，你要稱頌耶和華，不可忘記祂的一切恩惠。」─ 詩篇 103:2
-        </div>
     </div>
 
-    <!-- 費用試算 Modal -->
     <div id="calcModal" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-60 backdrop-blur-sm">
-        <div class="bg-white rounded-[2.5rem] p-10 max-w-md w-full card-shadow border-4 border-emerald-50">
-            <h2 class="text-3xl font-black text-gray-800 mb-8 text-center tracking-tighter">報名費試算</h2>
-            
+        <div class="bg-white rounded-[2.5rem] p-10 max-w-md w-full shadow-2xl">
+            <h2 class="text-3xl font-black text-gray-800 mb-8 text-center">報名費試算</h2>
             <div class="space-y-6 mb-10">
-                <div class="flex justify-between items-center">
-                    <label class="text-gray-700 font-black">國小以上 ($2,000)</label>
-                    <input type="number" id="adultCount" value="0" min="0" class="w-24 border-3 border-gray-100 rounded-xl p-3 text-center focus:border-emerald-500 outline-none font-black text-xl transition">
-                </div>
-                <div class="flex justify-between items-center">
-                    <label class="text-gray-700 font-black">4-7歲幼兒 ($1,000)</label>
-                    <input type="number" id="childCount" value="0" min="0" class="w-24 border-3 border-gray-100 rounded-xl p-3 text-center focus:border-emerald-500 outline-none font-black text-xl transition">
-                </div>
-                <div class="flex justify-between items-center">
-                    <label class="text-gray-700 font-black">0-3歲嬰兒 ($100)</label>
-                    <input type="number" id="babyCount" value="0" min="0" class="w-24 border-3 border-gray-100 rounded-xl p-3 text-center focus:border-emerald-500 outline-none font-black text-xl transition">
-                </div>
+                <div class="flex justify-between items-center"><label class="font-black">國小以上 ($2000)</label><input type="number" id="adultCount" value="0" class="w-24 border-2 rounded-xl p-2 text-center font-black"></div>
+                <div class="flex justify-between items-center"><label class="font-black">4-7歲幼兒 ($1000)</label><input type="number" id="childCount" value="0" class="w-24 border-2 rounded-xl p-2 text-center font-black"></div>
+                <div class="flex justify-between items-center"><label class="font-black">0-3歲嬰兒 ($100)</label><input type="number" id="babyCount" value="0" class="w-24 border-2 rounded-xl p-2 text-center font-black"></div>
             </div>
-
             <div class="flex gap-4">
-                <button onclick="closeCalculator()" class="flex-1 bg-gray-100 text-gray-500 font-black py-4 rounded-2xl hover:bg-gray-200 transition uppercase tracking-widest text-sm">取消</button>
-                <button onclick="submitCalculation()" class="flex-1 bg-emerald-600 text-white font-black py-4 rounded-2xl hover:bg-emerald-700 shadow-xl transition uppercase tracking-widest text-sm">確認試算結果</button>
+                <button onclick="closeCalculator()" class="flex-1 bg-gray-100 py-4 rounded-2xl font-bold">取消</button>
+                <button onclick="submitCalculation()" class="flex-1 bg-emerald-600 text-white py-4 rounded-2xl font-bold">確認試算</button>
             </div>
         </div>
     </div>
 
-    <!-- 費用提醒彈出視窗 -->
     <div id="alertModal" class="modal hidden fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black bg-opacity-70 backdrop-blur-md">
-        <div class="bg-white rounded-[3rem] p-10 max-w-md w-full card-shadow text-center relative overflow-hidden">
-            <!-- 裝飾元素 -->
-            <div class="absolute -top-10 -left-10 w-32 h-32 bg-emerald-50 rounded-full opacity-50"></div>
-            
-            <div class="w-24 h-24 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                </svg>
+        <div class="bg-white rounded-[3rem] p-10 max-w-md w-full text-center">
+            <h3 class="text-2xl font-black mb-2">應繳總額</h3>
+            <div id="totalDisplay" class="text-6xl font-black text-emerald-600 mb-8 font-mono">$0</div>
+            <p class="text-gray-600 mb-6 font-bold">請於 6/20 截止日前繳交報名費</p>
+            <div class="bg-emerald-50 border-2 border-emerald-100 rounded-[2rem] p-8 mb-8">
+                <p class="text-lg text-emerald-900 font-black italic">「出訪是愛主的表現，付出以上的報名費獲得價值：<span class="underline">無價</span>」</p>
             </div>
-            <h3 class="text-2xl font-black text-gray-800 mb-2">試算結果出爐！</h3>
-            <p class="text-gray-500 mb-2 font-bold">您的報名應繳總額為：</p>
-            <div id="totalDisplay" class="text-6xl font-black text-emerald-600 mb-8 font-mono drop-shadow-sm">$0</div>
-            
-            <p class="text-base text-gray-600 mb-6 leading-relaxed font-bold">
-                提交表單後一併繳交報名費或於<br>
-                <span class="text-red-500 underline font-black text-xl">6/20 報名截止日前繳交</span>
-            </p>
-
-            <!-- 信仰與鼓勵語區塊 -->
-            <div class="bg-emerald-50 border-2 border-emerald-100 rounded-[2rem] p-8 mb-8 shadow-inner transform rotate-1">
-                <p class="text-lg text-emerald-900 font-black leading-relaxed italic">
-                    「出訪是愛主的表現，付出以上的報名費獲得滿滿主內同靈分享的價值：<br>
-                    <span class="text-3xl text-emerald-600 underline decoration-double">無 價</span>」
-                </p>
-            </div>
-            
-            <a href="https://forms.gle/j4q9v3xBTk4vwUYi8" target="_blank" onclick="closeAllModals()" class="block w-full bg-emerald-600 text-white font-black py-6 rounded-2xl hover:bg-emerald-700 shadow-[0_15px_30px_rgba(16,185,129,0.4)] transition text-2xl transform hover:scale-105">
-                前往填寫報名表
-            </a>
-        </div>
-    </div>
-
-    <!-- 功能按鈕 -->
-    <div class="max-w-4xl mx-auto mt-10 flex flex-col md:flex-row justify-center items-center gap-6 no-print">
-        <button onclick="window.print()" class="bg-gray-800 text-white px-10 py-3 rounded-full text-base font-black hover:bg-gray-700 transition shadow-lg">
-            列印宣傳海報 / 存為 PDF
-        </button>
-        <div class="text-gray-400 text-sm font-bold animate-pulse">
-            💡 提示：可使用手機直接截圖分享至 LINE 群組
+            <a href="https://forms.gle/j4q9v3xBTk4vwUYi8" target="_blank" onclick="closeAllModals()" class="block w-full bg-emerald-600 text-white font-black py-6 rounded-2xl text-2xl shadow-lg">前往填寫表單</a>
         </div>
     </div>
 
     <script>
-        function openCalculator() {
-            document.getElementById('calcModal').classList.remove('hidden');
-        }
-
-        function closeCalculator() {
-            document.getElementById('calcModal').classList.add('hidden');
-        }
-
-        function closeAllModals() {
-            document.getElementById('calcModal').classList.add('hidden');
-            document.getElementById('alertModal').classList.add('hidden');
-        }
-
+        function openCalculator() { document.getElementById('calcModal').classList.remove('hidden'); }
+        function closeCalculator() { document.getElementById('calcModal').classList.add('hidden'); }
+        function closeAllModals() { document.getElementById('calcModal').classList.add('hidden'); document.getElementById('alertModal').classList.add('hidden'); }
+        
         function submitCalculation() {
-            const adults = parseInt(document.getElementById('adultCount').value) || 0;
-            const children = parseInt(document.getElementById('childCount').value) || 0;
-            const babies = parseInt(document.getElementById('babyCount').value) || 0;
-
-            const total = (adults * 2000) + (children * 1000) + (babies * 100);
-
-            if (total === 0) {
-                const modal = document.querySelector('#calcModal > div');
-                modal.classList.add('animate-shake');
-                setTimeout(() => modal.classList.remove('animate-shake'), 500);
-                return;
-            }
-
+            const total = (parseInt(document.getElementById('adultCount').value)||0)*2000 + (parseInt(document.getElementById('childCount').value)||0)*1000 + (parseInt(document.getElementById('babyCount').value)||0)*100;
+            if (total === 0) return alert("請輸入人數");
             document.getElementById('totalDisplay').innerText = `$${total.toLocaleString()}`;
             document.getElementById('calcModal').classList.add('hidden');
             document.getElementById('alertModal').classList.remove('hidden');
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            const totalCapacity = 84;
-            const currentElement = document.getElementById('current-count');
-            const progressFill = document.getElementById('progress-fill');
-            const progressPct = document.getElementById('progress-pct');
-            const statusText = document.getElementById('status-text');
-
             const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTg8N7hET1o2QMFrhjUhPwfFGeBRJ6hjWKhY6N1n_9x-Fl6WHLe3WuqKEPDsbMiLL3_70mz4nG6to-y/pub?output=csv';
-
-            currentElement.innerText = "...";
-
-            fetch(CSV_URL)
-                .then(res => res.text())
-                .then(data => {
-                    const rows = data.trim().split('\n');
-                    if (rows.length <= 1) {
-                        updateDisplay(0);
-                        return;
-                    }
-
-                    const headers = rows[0].split(',');
-                    let peopleColIndex = headers.findIndex(h => h.includes('人數'));
-                    
-                    let totalCount = 0;
-                    for (let i = 1; i < rows.length; i++) {
-                        const cols = rows[i].split(',');
-                        if (peopleColIndex !== -1 && cols[peopleColIndex]) {
-                            const rawVal = cols[peopleColIndex].trim().replace(/"/g, '');
-                            const val = parseInt(rawVal);
-                            totalCount += isNaN(val) ? 1 : val;
-                        } else {
-                            totalCount += 1;
-                        }
-                    }
-                    
-                    updateDisplay(totalCount);
-                })
-                .catch(err => {
-                    console.error("讀取失敗:", err);
-                    statusText.innerText = "目前雲端同步中，請洽會計股查詢。";
-                    updateDisplay(0); 
-                });
+            fetch(CSV_URL).then(res => res.text()).then(data => {
+                const rows = data.trim().split('\n');
+                const headers = rows[0].split(',');
+                let peopleColIndex = headers.findIndex(h => h.includes('人數'));
+                let totalCount = 0;
+                for (let i = 1; i < rows.length; i++) {
+                    const cols = rows[i].split(',');
+                    const val = parseInt(cols[peopleColIndex]?.replace(/"/g, ''));
+                    totalCount += isNaN(val) ? 1 : val;
+                }
+                updateDisplay(totalCount);
+            });
 
             function updateDisplay(count) {
+                const totalCap = 84;
+                const currentElement = document.getElementById('current-count');
+                const progressFill = document.getElementById('progress-fill');
+                const statusText = document.getElementById('status-text');
+                
                 currentElement.innerText = count;
-                const remaining = Math.max(0, totalCapacity - count);
-                const percentage = Math.min(100, (count / totalCapacity) * 100);
-                
-                progressFill.style.width = percentage + '%';
-                if (percentage > 10) {
-                    progressPct.innerText = Math.round(percentage) + '%';
-                    progressPct.classList.remove('opacity-0');
-                }
-                
-                if (count >= totalCapacity) {
-                    statusText.innerHTML = "✨ <span class='text-emerald-600'>感謝主！名額已滿，歡迎聯繫胡姊妹登記候補。</span>";
-                } else {
-                    statusText.innerHTML = `感謝主！目前僅剩 <span class="text-red-600 font-black text-xl">${remaining}</span> 個名額，欲報從速！`;
-                }
+                progressFill.style.width = Math.min(100, (count/totalCap)*100) + '%';
+                statusText.innerHTML = count >= totalCap ? "名額已滿，請聯繫胡姊妹登記候補" : `目前僅剩 <span class="text-red-600 text-xl font-black">${totalCap-count}</span> 個名額`;
             }
         });
     </script>
-
-    <!-- 加入簡易動畫關鍵影格 -->
-    <style>
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-10px); }
-            75% { transform: translateX(10px); }
-        }
-        .animate-shake { animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both; }
-    </style>
-
 </body>
 </html>
