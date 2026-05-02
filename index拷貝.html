@@ -1,268 +1,229 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+[slides]
+<!DOCTYPE html>
+<html lang="zh-TW">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.4">
-  <style type="text/css">
-    body {background-color: #0d121f}
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #4689cc; -webkit-text-stroke: #4689cc}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #c27e65; -webkit-text-stroke: #c27e65}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #8cd3fe; -webkit-text-stroke: #8cd3fe}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #cacaca; -webkit-text-stroke: #cacaca}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #a7c598; -webkit-text-stroke: #a7c598}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #cacaca; -webkit-text-stroke: #cacaca; min-height: 16.0px}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6d7378; -webkit-text-stroke: #6d7378}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #71c083; -webkit-text-stroke: #71c083}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6d7378; -webkit-text-stroke: #6d7378; min-height: 16.0px}
-    span.s1 {font-kerning: none; background-color: #171818}
-    span.s2 {font-kerning: none; color: #8cd3fe; background-color: #171818; -webkit-text-stroke: 0px #8cd3fe}
-    span.s3 {font-kerning: none; color: #6d6d6d; background-color: #171818; -webkit-text-stroke: 0px #6d6d6d}
-    span.s4 {font-kerning: none; color: #4689cc; background-color: #171818; -webkit-text-stroke: 0px #4689cc}
-    span.s5 {font-kerning: none; color: #cacaca; background-color: #171818; -webkit-text-stroke: 0px #cacaca}
-    span.s6 {font-kerning: none; color: #c27e65; background-color: #171818; -webkit-text-stroke: 0px #c27e65}
-    span.s7 {font-kerning: none; color: #d4d4d4; background-color: #171818; -webkit-text-stroke: 0px #d4d4d4}
-    span.s8 {font-kerning: none; color: #71c083; background-color: #171818; -webkit-text-stroke: 0px #71c083}
-    span.s9 {font-kerning: none; color: #a7c598; background-color: #171818; -webkit-text-stroke: 0px #a7c598}
-    span.s10 {font-kerning: none}
-    span.s11 {font-kerning: none; color: #6d7378; background-color: #171818; -webkit-text-stroke: 0px #6d7378}
-    span.s12 {font-kerning: none; color: #b76ff7; background-color: #171818; -webkit-text-stroke: 0px #b76ff7}
-    span.s13 {font-kerning: none; color: #f67c30; background-color: #171818; -webkit-text-stroke: 0px #f67c30}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TJC大溪教會 花蓮出訪簡報</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --day1-bg: #f0f9ff;
+            --day1-accent: #0ea5e9;
+            --day2-bg: #f0fdf4;
+            --day2-accent: #10b981;
+            --day3-bg: #fffbeb;
+            --day3-accent: #f59e0b;
+            --church-blue: #1e3a8a;
+        }
+
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 0; background-color: #f1f5f9; display: flex; flex-direction: column; align-items: center; }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: 60px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3 { font-family: 'Noto Sans TC', sans-serif; margin: 0; }
+        p, li { font-family: 'Noto Sans TC', sans-serif; font-size: 22px; line-height: 1.6; color: #334155; }
+
+        .church-name {
+            font-size: 80px;
+            font-weight: 900;
+            color: var(--church-blue);
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            margin-bottom: 10px;
+        }
+
+        .slide-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            border-left: 12px solid var(--church-blue);
+            padding-left: 25px;
+            color: #1e293b;
+        }
+
+        .content-area {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* Layouts */
+        .title-layout { text-align: center; justify-content: center; height: 100%; display: flex; flex-direction: column; }
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; width: 100%; }
+        .image-wrapper { width: 100%; height: 400px; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .tile-content { display: flex; gap: 30px; width: 100%; }
+        .tile { flex: 1; padding: 30px; border-radius: 20px; background: rgba(255,255,255,0.8); border: 1px solid rgba(0,0,0,0.05); }
+        .tile h3 { font-size: 28px; margin-bottom: 15px; font-weight: 700; }
+        .icon { font-size: 40px; margin-bottom: 15px; }
+
+        /* Custom Styles for Days */
+        #slide2 { background-color: var(--day1-bg); }
+        #slide2 .slide-title { border-color: var(--day1-accent); }
+        #slide3 { background-color: var(--day2-bg); }
+        #slide3 .slide-title { border-color: var(--day2-accent); }
+        #slide4 { background-color: var(--day3-bg); }
+        #slide4 .slide-title { border-color: var(--day3-accent); }
+
+        /* Highlight box */
+        .highlight-box {
+            background: #1e3a8a;
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .highlight-box h2 { color: #facc15; font-size: 40px; margin-bottom: 10px; }
+
+        .qr-code { width: 180px; height: 180px; background: white; padding: 10px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    </style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s4">html</span><span class="s5"> </span><span class="s2">lang</span><span class="s3">=</span><span class="s1">"zh-TW"</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">meta</span><span class="s5"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s6">"UTF-8"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">meta</span><span class="s5"> </span><span class="s2">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s5"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">title</span><span class="s3">&gt;</span><span class="s1">TJC大溪教會花蓮出訪海報</span><span class="s3">&lt;/</span><span class="s4">title</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">script</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.tailwindcss.com"</span><span class="s3">&gt;&lt;/</span><span class="s4">script</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">link</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&amp;display=swap"</span><span class="s5"> </span><span class="s2">rel</span><span class="s3">=</span><span class="s1">"stylesheet"</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">body</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-family:</span><span class="s1"> </span><span class="s8">'Noto Sans TC'</span><span class="s7">,</span><span class="s1"> </span><span class="s6">sans-serif</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s1"> #f0f9ff</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.gradient-bg</span><span class="s5"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background:</span><span class="s1"> </span><span class="s6">linear-gradient(</span><span class="s9">135deg</span><span class="s7">,</span><span class="s1"> #0ea5e9 </span><span class="s9">0%</span><span class="s7">,</span><span class="s1"> #10b981 </span><span class="s9">100%</span><span class="s6">)</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.card-shadow</span><span class="s5"> </span><span class="s7">{</span></p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s2">box-shadow:</span><span class="s5"> </span><span class="s1">0</span><span class="s5"> </span><span class="s1">10px</span><span class="s5"> </span><span class="s1">25px</span><span class="s5"> </span><span class="s1">-5px</span><span class="s5"> </span><span class="s6">rgba(</span><span class="s1">0</span><span class="s7">,</span><span class="s5"> </span><span class="s1">0</span><span class="s7">,</span><span class="s5"> </span><span class="s1">0</span><span class="s7">,</span><span class="s5"> </span><span class="s1">0.1</span><span class="s6">)</span><span class="s7">,</span><span class="s5"> </span><span class="s1">0</span><span class="s5"> </span><span class="s1">8px</span><span class="s5"> </span><span class="s1">10px</span><span class="s5"> </span><span class="s1">-6px</span><span class="s5"> </span><span class="s6">rgba(</span><span class="s1">0</span><span class="s7">,</span><span class="s5"> </span><span class="s1">0</span><span class="s7">,</span><span class="s5"> </span><span class="s1">0</span><span class="s7">,</span><span class="s5"> </span><span class="s1">0.1</span><span class="s6">)</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.scenery-img</span><span class="s5"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">width:</span><span class="s1"> </span><span class="s9">100%</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">height:</span><span class="s1"> </span><span class="s9">160px</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">object-fit:</span><span class="s1"> </span><span class="s6">cover</span><span class="s7">;</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">border-radius:</span><span class="s5"> </span><span class="s9">12px</span><span class="s7">;</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">margin-bottom:</span><span class="s5"> </span><span class="s9">1rem</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.progress-bar</span><span class="s5"> </span><span class="s7">{</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s2">transition:</span><span class="s5"> </span><span class="s1">width</span><span class="s5"> </span><span class="s9">1s</span><span class="s5"> </span><span class="s1">ease-in-out</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>@</span><span class="s4">media</span><span class="s1"> </span><span class="s4">print</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>.no-print { </span><span class="s2">display:</span><span class="s1"> </span><span class="s6">none</span><span class="s7">;</span><span class="s1"> </span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s4">body</span><span class="s1"> </span><span class="s7">{</span><span class="s1"> </span><span class="s2">background:</span><span class="s1"> </span><span class="s6">white</span><span class="s7">;</span><span class="s1"> </span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s4">body</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"p-4 md:p-8"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s10"></span><br></p>
-<p class="p7"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- 海報容器 --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-4xl mx-auto bg-white rounded-3xl overflow-hidden card-shadow border-4 border-white"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p7"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- 標題區域 --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"gradient-bg p-8 text-white text-center relative overflow-hidden"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"absolute top-0 right-0 opacity-10 -mr-10 -mt-10"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">svg</span><span class="s5"> </span><span class="s2">width</span><span class="s3">=</span><span class="s1">"200"</span><span class="s5"> </span><span class="s2">height</span><span class="s3">=</span><span class="s1">"200"</span><span class="s5"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s5"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s3">&gt;&lt;</span><span class="s4">path</span><span class="s5"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"</span><span class="s3">/&gt;&lt;/</span><span class="s4">svg</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-bold tracking-widest mb-2 opacity-90"</span><span class="s3">&gt;</span><span class="s5">主內一家、同心同行</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">h1</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl md:text-5xl font-900 mb-4 tracking-tighter leading-tight"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>TJC大溪教會</span><span class="s3">&lt;</span><span class="s4">br</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"md:hidden"</span><span class="s3">&gt;</span><span class="s1">花蓮三天兩夜教會全體出訪</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">h1</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"inline-block bg-white text-emerald-600 px-6 py-2 rounded-full font-bold text-lg shadow-md"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>2025 / 07 / 19 (日) ─ 07 / 21 (二)</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s10"></span><br></p>
-<p class="p7"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- 核心內容 --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"p-6 md:p-10 grid grid-cols-1 md:grid-cols-3 gap-8"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">&lt;!-- 第一天 --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-sky-50 p-5 rounded-2xl border border-sky-100 flex flex-col"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">img</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://images.unsplash.com/photo-1549410191-4433f4a3e743?auto=format&amp;fit=crop&amp;q=80&amp;w=800"</span><span class="s5"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"[七星潭海景]"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"scenery-img"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-sky-600 font-black text-2xl mb-4"</span><span class="s3">&gt;</span><span class="s5">Day 1 </span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-sm font-normal text-gray-500 block"</span><span class="s3">&gt;</span><span class="s5">啟程與聯誼</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">ul</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"space-y-3 text-gray-700 text-sm"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">li</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-sky-500 mr-2"</span><span class="s3">&gt;</span><span class="s1">●</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">大溪出發 07:00</span><span class="s3">&lt;/</span><span class="s4">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">li</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-sky-500 mr-2"</span><span class="s3">&gt;</span><span class="s1">●</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">台泥 DAkA 園區</span><span class="s3">&lt;/</span><span class="s4">li</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">li</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"font-bold text-emerald-700"</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-emerald-500 mr-2"</span><span class="s3">&gt;</span><span class="s5">●</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s5">北浦教會聯誼</span><span class="s3">&lt;/</span><span class="s4">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">li</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-sky-500 mr-2"</span><span class="s3">&gt;</span><span class="s1">●</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">七星潭、柴魚博物館</span><span class="s3">&lt;/</span><span class="s4">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">li</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-sky-500 mr-2"</span><span class="s3">&gt;</span><span class="s1">●</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">花蓮文創園區</span><span class="s3">&lt;/</span><span class="s4">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">ul</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">&lt;!-- 第二天 --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-emerald-50 p-5 rounded-2xl border border-emerald-100 flex flex-col"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">img</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://images.unsplash.com/photo-1596495573826-39463b0ea67a?auto=format&amp;fit=crop&amp;q=80&amp;w=800"</span><span class="s5"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"[海洋公園]"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"scenery-img"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-emerald-600 font-black text-2xl mb-4"</span><span class="s3">&gt;</span><span class="s5">Day 2 </span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-sm font-normal text-gray-500 block"</span><span class="s3">&gt;</span><span class="s5">樂園與分享</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">ul</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"space-y-3 text-gray-700 text-sm"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">li</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"font-bold text-blue-700"</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-blue-500 mr-2"</span><span class="s3">&gt;</span><span class="s5">●</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s5">遠雄海洋公園</span><span class="s3">&lt;/</span><span class="s4">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">li</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-xs text-gray-500 ml-5"</span><span class="s3">&gt;</span><span class="s1">(整日暢遊，午餐自理)</span><span class="s3">&lt;/</span><span class="s4">li</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">li</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"font-bold text-emerald-700"</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-emerald-500 mr-2"</span><span class="s3">&gt;</span><span class="s5">●</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s5">銅門教會聯誼</span><span class="s3">&lt;/</span><span class="s4">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">li</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-emerald-500 mr-2"</span><span class="s3">&gt;</span><span class="s1">●</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">花蓮市區自由活動</span><span class="s3">&lt;/</span><span class="s4">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">li</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-emerald-500 mr-2"</span><span class="s3">&gt;</span><span class="s1">●</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">入住：承億文旅</span><span class="s3">&lt;/</span><span class="s4">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">ul</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">&lt;!-- 第三天 --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-amber-50 p-5 rounded-2xl border border-amber-100 flex flex-col"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">img</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://images.unsplash.com/photo-1506450983270-d72944227ed8?auto=format&amp;fit=crop&amp;q=80&amp;w=800"</span><span class="s5"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"[清水斷崖]"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"scenery-img"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-amber-600 font-black text-2xl mb-4"</span><span class="s3">&gt;</span><span class="s5">Day 3 </span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-sm font-normal text-gray-500 block"</span><span class="s3">&gt;</span><span class="s5">豐盛與歸途</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">ul</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"space-y-3 text-gray-700 text-sm"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">li</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-amber-500 mr-2"</span><span class="s3">&gt;</span><span class="s1">●</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">地味耕玩味蕃樂園</span><span class="s3">&lt;/</span><span class="s4">li</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">li</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"font-bold text-emerald-700"</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-emerald-500 mr-2"</span><span class="s3">&gt;</span><span class="s5">●</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s5">崇德教會聯誼</span><span class="s3">&lt;/</span><span class="s4">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">li</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-amber-500 mr-2"</span><span class="s3">&gt;</span><span class="s1">●</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">崇德瑩海灘秘境</span><span class="s3">&lt;/</span><span class="s4">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">li</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-amber-500 mr-2"</span><span class="s3">&gt;</span><span class="s1">●</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">石門海鮮餐廳</span><span class="s3">&lt;/</span><span class="s4">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">li</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-amber-500 mr-2"</span><span class="s3">&gt;</span><span class="s1">●</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">平安賦歸 19:00</span><span class="s3">&lt;/</span><span class="s4">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">ul</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s10"></span><br></p>
-<p class="p7"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- 報名統計區塊 --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 md:px-10 pb-6"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white border-2 border-emerald-100 rounded-2xl p-6 shadow-sm"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-between items-end mb-2"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-emerald-100 text-emerald-700 text-xs font-bold px-2 py-1 rounded mb-2 inline-block uppercase"</span><span class="s3">&gt;</span><span class="s5">即時統計</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">h4</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-800 font-black text-lg"</span><span class="s3">&gt;</span><span class="s5">目前報名進度</span><span class="s3">&lt;/</span><span class="s4">h4</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-right"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"current-count"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl font-black text-emerald-600"</span><span class="s3">&gt;</span><span class="s5">--</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-gray-400 font-bold"</span><span class="s3">&gt;</span><span class="s1">/ 84 人</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">&lt;!-- 進度條 --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full bg-gray-100 rounded-full h-4 overflow-hidden"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"progress-fill"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"progress-bar gradient-bg h-full"</span><span class="s5"> </span><span class="s2">style</span><span class="s3">=</span><span class="s1">"width: 0%"</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center text-sm text-gray-500 mt-3 font-medium"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>✨ </span><span class="s3">&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">id</span><span class="s3">=</span><span class="s6">"status-text"</span><span class="s3">&gt;</span><span class="s1">正在讀取最新報名數據...</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s10"></span><br></p>
-<p class="p7"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- 費用資訊 --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-gray-50 p-8 border-t border-gray-100"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">h3</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-500 text-center text-sm font-bold uppercase tracking-widest mb-6 leading-relaxed"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>報名費用級距 </span><span class="s3">&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-emerald-600"</span><span class="s3">&gt;</span><span class="s1">（教會預算已列補助共計 25 萬）</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">h3</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-1 md:grid-cols-3 gap-4 mb-8"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-4 rounded-xl shadow-sm border border-gray-200 text-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-gray-500 text-xs mb-1"</span><span class="s3">&gt;</span><span class="s1">國小以上至成人</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-2xl font-black text-emerald-600"</span><span class="s3">&gt;</span><span class="s5">NT$ 2,000</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-4 rounded-xl shadow-sm border border-gray-200 text-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-gray-500 text-xs mb-1"</span><span class="s3">&gt;</span><span class="s1">4歲至7歲 (幼兒)</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-2xl font-black text-sky-600"</span><span class="s3">&gt;</span><span class="s5">NT$ 1,000</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-4 rounded-xl shadow-sm border border-gray-200 text-center border-2 border-amber-200"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-gray-500 text-xs mb-1"</span><span class="s3">&gt;</span><span class="s1">0歲至3歲 (嬰兒)</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-2xl font-black text-amber-600"</span><span class="s3">&gt;</span><span class="s5">免費</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s10"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col md:flex-row justify-between items-center gap-6"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center md:text-left"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-gray-400 leading-relaxed"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>＊費用包含：全程兩台大型遊覽車、承億文旅住宿、門票(含海洋公園團體票)、保險、餐費。</span><span class="s3">&lt;</span><span class="s4">br</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>＊不包含項目：7/20 海洋公園午餐自理、個人購物消費。</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"flex-shrink-0"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">&lt;!-- 雲端表單連結按鈕 --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">a</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://forms.gle/YOUR_GOOGLE_FORM_ID"</span><span class="s5"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-10 rounded-xl transition duration-300 transform hover:scale-105 shadow-lg text-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>點我填寫雲端報名表</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s10"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center md:text-right border-l-0 md:border-l pl-0 md:pl-6 border-gray-200"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-gray-700 font-bold"</span><span class="s3">&gt;</span><span class="s1">報名繳費：會計股 胡哲貞姊妹</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-red-500 font-black text-lg"</span><span class="s3">&gt;</span><span class="s1">截止報名日期：6 / 20</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-gray-500 text-xs"</span><span class="s3">&gt;</span><span class="s1">下次籌備會：115年7月</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s10"></span><br></p>
-<p class="p7"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- 底部小字 --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-4 text-center text-[10px] text-gray-400"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>「我的心哪，你要稱頌耶和華，不可忘記祂的一切恩惠。」─ 詩篇 103:2</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s10"></span><br></p>
-<p class="p7"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- 功能按鈕 --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-4xl mx-auto mt-6 flex justify-center gap-4 no-print"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">button</span><span class="s5"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"window.print()"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-gray-800 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-700 transition"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>列印海報 / 存為 PDF</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">button</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-400 text-sm py-2"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>提示：可使用行動裝置截圖分享至 LINE</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s10"></span><br></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">/**</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">         </span>* 報名統計邏輯說明：</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">         </span>* 1. 如果您沒有 API，可以手動修改 manualCount 變數。</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">         </span>* 2. 若要串接 Google Sheets，請參考註解掉的 fetch 部分。</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">         </span>*/</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>document</span><span class="s7">.</span><span class="s1">addEventListener</span><span class="s7">(</span><span class="s8">'DOMContentLoaded'</span><span class="s7">,</span><span class="s1"> </span><span class="s7">()</span><span class="s1"> </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> totalCapacity </span><span class="s7">=</span><span class="s1"> </span><span class="s13">84</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> currentElement </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'current-count'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> remainingElement </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'remaining-count'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> progressFill </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'progress-fill'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> statusText </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'status-text'</span><span class="s7">);</span></p>
-<p class="p6"><span class="s10"></span><br></p>
-<p class="p7"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">// --- 手動更新模式 (建議方案) ---</span></p>
-<p class="p7"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s12">let</span><span class="s5"> manualCount </span><span class="s7">=</span><span class="s5"> </span><span class="s13">65</span><span class="s7">;</span><span class="s5"> </span><span class="s1">// &lt;--- 每次有人報名，只需修改 GitHub 上的這個數字並存檔</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>updateDisplay</span><span class="s7">(</span><span class="s1">manualCount</span><span class="s7">);</span></p>
-<p class="p6"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">function</span><span class="s1"> updateDisplay</span><span class="s7">(</span><span class="s1">count</span><span class="s7">)</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>currentElement</span><span class="s7">.</span><span class="s1">innerText </span><span class="s7">=</span><span class="s1"> count</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s12">const</span><span class="s1"> remaining </span><span class="s7">=</span><span class="s1"> totalCapacity </span><span class="s7">-</span><span class="s1"> count</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s12">const</span><span class="s1"> percentage </span><span class="s7">=</span><span class="s1"> </span><span class="s7">(</span><span class="s1">count </span><span class="s7">/</span><span class="s1"> totalCapacity</span><span class="s7">)</span><span class="s1"> </span><span class="s7">*</span><span class="s1"> </span><span class="s13">100</span><span class="s7">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>progressFill</span><span class="s7">.</span><span class="s1">style</span><span class="s7">.</span><span class="s1">width </span><span class="s7">=</span><span class="s1"> percentage </span><span class="s7">+</span><span class="s1"> </span><span class="s8">'%'</span><span class="s7">;</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                </span>statusText</span><span class="s7">.</span><span class="s5">innerHTML </span><span class="s7">=</span><span class="s5"> </span><span class="s1">`感謝主！目前僅剩 &lt;span class="text-red-500 font-bold"&gt;</span><span class="s7">${</span><span class="s5">remaining</span><span class="s7">}</span><span class="s1">&lt;/span&gt; 個名額，欲報從速！`</span><span class="s7">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s12">if</span><span class="s1"> </span><span class="s7">(</span><span class="s1">count </span><span class="s7">&gt;=</span><span class="s1"> totalCapacity</span><span class="s7">)</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>statusText</span><span class="s7">.</span><span class="s1">innerHTML </span><span class="s7">=</span><span class="s1"> </span><span class="s8">"✨ 感謝主！名額已滿，進入候補名單。"</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>statusText</span><span class="s7">.</span><span class="s1">classList</span><span class="s7">.</span><span class="s1">add</span><span class="s7">(</span><span class="s8">"text-emerald-600"</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span></p>
-<p class="p6"><span class="s10"></span><br></p>
-<p class="p7"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">/* // --- 自動更新模式 (進階：串接 Google Sheets CSV) ---</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">            </span>// 需先在試算表點擊「發布到網路」並選擇 CSV 格式</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">            </span>const CSV_URL = '您的_GOOGLE_SHEET_CSV_發布網址';</span></p>
-<p class="p9"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">            </span>fetch(CSV_URL)</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                </span>.then(res =&gt; res.text())</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                </span>.then(data =&gt; {</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                    </span>// 假設試算表第一行之後每行代表一人</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                    </span>const rows = data.split('\n').length - 1;<span class="Apple-converted-space"> </span></span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                    </span>updateDisplay(rows);</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                </span>})</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                </span>.catch(err =&gt; {</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                    </span>console.error("無法讀取統計數據", err);</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                    </span>updateDisplay(manualCount); // 出錯時使用手動數據</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">            </span>*/</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">});</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s10"></span><br></p>
-<p class="p1"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
+
+<div class="slide-container" id="slide1">
+    <div class="title-layout">
+        <div class="church-name">TJC 大溪教會</div>
+        <h2 style="font-size: 45px; color: #475569; letter-spacing: 5px;">2026 花蓮三天兩夜全體出訪</h2>
+        <div style="margin-top: 50px;">
+            <span style="background: #facc15; padding: 10px 30px; border-radius: 50px; font-weight: 900; font-size: 32px;">
+                2026.07.19 (日) － 07.21 (二)
+            </span>
+        </div>
+        <p style="margin-top: 30px; font-size: 26px;">主內一家 · 同心同行</p>
+    </div>
+</div>
+
+<div class="slide-container" id="slide2">
+    <h2 class="slide-title">Day 1：啟程與聯誼</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 20px;"><strong>07:00</strong> 大溪教會出發</li>
+                    <li style="margin-bottom: 20px;"><strong>10:00</strong> 台泥 DAkA 園區</li>
+                    <li style="margin-bottom: 20px; background: white; padding: 15px; border-radius: 15px; border-left: 5px solid #10b981;">
+                        <strong>12:00</strong> <b>北浦教會聯誼 (愛餐)</b>
+                    </li>
+                    <li style="margin-bottom: 20px;"><strong>14:30</strong> 七星潭景觀、柴魚博物館</li>
+                    <li style="margin-bottom: 20px;"><strong>17:00</strong> 辦理飯店入住</li>
+                </ul>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1549410191-4433f4a3e743?auto=format&fit=crop&q=80&w=800" alt="七星潭">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide3">
+    <h2 class="slide-title">Day 2：熱血樂園行</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1513889959010-65a4ec810ebb?auto=format&fit=crop&q=80&w=800" alt="海洋公園">
+            </div>
+            <div>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 20px; color: #1d4ed8; font-weight: bold;"><strong>09:00</strong> 遠雄海洋公園 (全日暢遊)</li>
+                    <li style="margin-bottom: 20px; font-size: 18px; color: #64748b;">* 午餐請於園區內自理</li>
+                    <li style="margin-bottom: 20px; background: white; padding: 15px; border-radius: 15px; border-left: 5px solid #10b981;">
+                        <strong>17:30</strong> <b>銅門教會聯誼 (愛餐)</b>
+                    </li>
+                    <li style="margin-bottom: 20px;"><strong>20:00</strong> 花蓮市區自由時間 / 逛夜市</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide4">
+    <h2 class="slide-title">Day 3：壯麗山海賦歸</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="icon" style="color: var(--day3-accent);"><i class="fa-solid fa-cookie-bite"></i></div>
+                <h3>玩味蕃樂園</h3>
+                <p>體驗花蓮在地文化，選購特色伴手禮。</p>
+            </div>
+            <div class="tile" style="border: 2px solid var(--day2-accent);">
+                <div class="icon" style="color: var(--day2-accent);"><i class="fa-solid fa-church"></i></div>
+                <h3>崇德教會聯誼</h3>
+                <p>中午於崇德教會享用愛餐，靈胞交通。</p>
+            </div>
+            <div class="tile">
+                <div class="icon" style="color: #0ea5e9;"><i class="fa-solid fa-mountain-sun"></i></div>
+                <h3>清水斷崖</h3>
+                <p>見證世界級斷崖奇景，隨後帶著滿滿祝福平安賦歸。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide5" style="background: #334155; color: white;">
+    <h2 class="slide-title" style="color: white; border-color: #facc15;">下榻飯店：承億文旅</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <h3 style="color: #facc15; font-size: 36px; margin-bottom: 20px;">花蓮山知道 Hotel Day</h3>
+                <p style="color: #cbd5e1;">連續兩晚入住高品質設計旅店。</p>
+                <ul style="color: #e2e8f0; margin-top: 20px;">
+                    <li>位於花蓮火車站前，交通便利</li>
+                    <li>融入自然山林設計，放鬆身心</li>
+                    <li>優質早餐，充足電力迎接行程</li>
+                </ul>
+                <div style="margin-top: 40px; padding: 15px; border: 1px dashed #facc15; display: inline-block;">
+                    <p style="color: #facc15; font-size: 18px; margin: 0;">點擊連結查看官網：</p>
+                    <a href="https://share.google/JoJoZstnhiK8nGNI2" style="color: white; text-decoration: underline;">https://share.google/JoJoZstnhiK8nGNI2</a>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800" alt="Hotel Interior">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide6">
+    <h2 class="slide-title">報名資訊</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div class="highlight-box">
+                <h2>費用級距</h2>
+                <p>國小以上：$2,000</p>
+                <p>4-7歲幼兒：$1,000</p>
+                <p>0-3歲嬰兒：$100</p>
+                <hr style="margin: 20px 0; border: 0; border-top: 1px solid rgba(255,255,255,0.3);">
+                <p style="font-size: 18px;">※ 報名費請交予 <b>胡哲貞姊妹</b></p>
+                <p style="font-size: 18px; color: #facc15;">截止日期：2026 / 06 / 20</p>
+            </div>
+            <div style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <p style="font-weight: bold; margin-bottom: 20px;">手機掃描立即報名</p>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://forms.gle/j4q9v3xBTk4vwUYi8" alt="QR" class="qr-code">
+                <p style="font-size: 16px; color: #64748b; mt-4; max-width: 300px;">出訪是愛主的表現，獲得主內同靈分享的價值：無價</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
+
